@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Premium Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px; /* Slimmer look is more modern */
+}
+
+::-webkit-scrollbar-track {
+  background: #050505; /* Matches your footer/body background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #10b981, #065f46); /* Emerald gradient */
+  border-radius: 20px;
+  border: 1px solid #050505; /* Adds a little 'gap' feel */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981; /* Brighter emerald on hover */
+}
+
+/* Firefox Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #10b981 #050505;
+}
+
+/* Selection Color - Updated to match Emerald Theme */
+::selection {
+  background: rgba(16, 185, 129, 0.3); /* Subtle emerald glow for text highlight */
+  color: #ffffff;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
